@@ -8,11 +8,7 @@ unction property_transfer(address _token, address _to, uint _amt) public {
   "contributors": [
 interface Token {
    }
-    function property_transfer(address _token, address _to, uint _amt) public {
-        require(_to != address(this));
-      assert(xPost == xPre - _amt);
- TokenCorrect t = TokenCorrect(_token);  
-contract TokenCorrect is Token {
+   
     mapping (address => uint) balance;
     constructor(address _a, uint _b) {
     function balanceOf(address _a) public view override returns (uint) {
@@ -20,7 +16,11 @@ contract TokenCorrect is Token {
     function balanceOf(address _a) external view returns (uint);
 
      function balanceOf(address _a) public view override returns (uint) {
-
+ function property_transfer(address _token, address _to, uint _amt) public {
+        require(_to != address(this));
+      assert(xPost == xPre - _amt);
+ TokenCorrect t = TokenCorrect(_token);  
+contract TokenCorrect is Token {
         TokenCorrect t = TokenCorrect(_token);        uint xPre = t.balanceOf(address(this));
         require(xPre >= _amt);
         uint yPre = t.balanceOf(_to);
