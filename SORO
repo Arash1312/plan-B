@@ -1,0 +1,97 @@
+# VYRO — Smart System Monitor
+
+A lightweight, cross-platform system monitoring CLI built with Python. Track CPU usage, memory consumption, disk space, running processes, and system health from a clean terminal interface.
+
+## Features
+
+* Live CPU and memory monitoring
+* Disk usage overview
+* Top processes by CPU and memory consumption
+* Configurable resource usage warnings
+* JSON report export
+* Continuous monitoring mode
+* Cross-platform support for Windows, Linux, and macOS
+* Graceful error handling and clean terminal output
+
+## Project Structure
+
+```text
+vyro-system-monitor/
+├── vyro.py
+├── requirements.txt
+├── .gitignore
+└── README.md
+```
+
+## Installation
+
+```bash
+git clone https://github.com/YOUR_USERNAME/vyro-system-monitor.git
+cd vyro-system-monitor
+python -m venv .venv
+```
+
+Activate the virtual environment:
+
+**Windows PowerShell**
+
+```powershell
+.venv\Scripts\Activate.ps1
+```
+
+**Linux / macOS**
+
+```bash
+source .venv/bin/activate
+```
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+## Usage
+
+Display a system report:
+
+```bash
+python vyro.py
+```
+
+Monitor the system continuously:
+
+```bash
+python vyro.py --watch
+```
+
+Set custom warning thresholds:
+
+```bash
+python vyro.py --cpu-limit 85 --memory-limit 90
+```
+
+Export a JSON report:
+
+```bash
+python vyro.py --json report.json
+```
+
+Display more running processes:
+
+```bash
+python vyro.py --top 15
+```
+
+## Requirements
+
+* Python 3.10+
+* psutil
+
+## License
+
+MIT License
+
+## Disclaimer
+
+VYRO is a local monitoring utility. It does not terminate processes, modify system settings, or transmit system information to external servers by default.
